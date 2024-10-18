@@ -1,6 +1,7 @@
+import type { NextRequest } from 'next/server';
 import { spawnSync } from 'node:child_process';
 
-export function GET(req: Request, res: Response) {
+export function GET(req: NextRequest) {
 	let javaVersion = '';
 	try {
 		// spawn java version
